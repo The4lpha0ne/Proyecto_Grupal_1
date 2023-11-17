@@ -1,0 +1,531 @@
+/* Aplica reglas globales a todos los 
+elementos, incluidos los pseudo-elementos 
+::after y ::before */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 1.5%;
+    padding: 0%;
+    border: 0%;
+}
+
+/* Define variables CSS en el ámbito 
+global (:root) */
+:root {
+    --oscuro: #212121;
+    --gris: #757575;
+    --grisClaro: #dfe9f3;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    /***************************/
+    --Charcoal: #36454F; 
+    --DeepBlue: #0021f3; 
+    --BlueViolet: #8a2be2; 
+    --NeonGreen: #39ff14; 
+    --MalachiteGreen: #0BDA51; 
+    --CrimsonRed: #990000; 
+    --DeepOrange: #dc4d01;
+    --LightBlue: #87CEEB;
+    --Brown2: #964B00;
+    --DeepPink: #ff1493;
+    --Gold2: #ffbf00;
+}
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+/* width */
+::-webkit-scrollbar {
+    width: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track-piece {
+    background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--Gold2);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+
+html, body {
+    overflow-x: hidden;
+    scrollbar-color: black #ffbf00;
+    scrollbar-width: auto;
+}
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+/* Establece el tamaño de fuente 
+base para el documento HTML */
+html {
+    font-size: 62.5%;
+}
+
+/*1rem = 10px*/
+body {
+    font-size: 16px;
+    font-family: 'Sono', sans-serif;
+    /* background-color: black; */
+    color: var(--NeonGreen);
+    /* padding: 10px; */
+    background-image: url('/img/L_background_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;  
+    background-attachment: fixed;  
+    background-position: center center;  
+}
+
+h1 {
+    color: #39ff14;
+    border-bottom: 4px solid #39ff14;
+    text-align: center;
+    font-size: 70px;
+    background-color: black;
+    border-radius: 25px;
+    border: 4px solid aqua;
+}
+
+.h1-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 610px) {
+    h1 {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 510px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 430px) {
+    h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 392px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 346px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 258px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+.logo1 {
+    width: 5rem;
+    height: auto;
+    border-radius: 1rem;
+    border: 4px solid var(--Gold2);
+}
+
+.menu-navegacion {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: var(--DeepBlue);
+    border-radius: 25px;
+    border: 4px solid aqua;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: aqua;
+    font-size: 1.6rem;
+    margin: 0 1.5rem;
+    transition: color 0.3s;
+    font-size: 24px;
+}
+
+.menu-navegacion a:hover {
+    color: var(--Gold2);
+}
+
+@media (max-width: 768px) {
+    .menu-navegacion {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menu-navegacion a {
+        margin: 0.8rem 0;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#contenedores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contenedor {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 transparent;
+    opacity: 1;
+    transition: background-color 0.5s, 
+                font-size 0.5s, 
+                color 0.5s, 
+                line-height 0.5s, 
+                border-radius 0.5s, 
+                box-shadow 0.5s, 
+                opacity 0.5s, 
+                transform 0.5s, 
+                border 0.5s, 
+                padding 0.5s;
+    border: 4px solid aqua;
+    text-shadow: 2px 2px black;
+}
+
+.contenedor:hover {
+    background-color: var(--DeepBlue);
+    font-size: 20px;
+    color: var(--NeonGreen);
+    line-height: 1.5;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 10px black;
+    /* opacity: 0.5; */
+    transform: translateY(-30px);
+    border: 6px solid var(--Gold2);
+    padding: 10px;
+    cursor: pointer;
+    font-style: italic;
+}
+
+.con1 {
+    /* background-color: var(--Charcoal); */
+    background-color: black;
+}
+
+.con2 {
+    /* background-color: var(--DeepBlue); */
+    background-color: black;
+}
+
+.con3 {
+    /* background-color: var(--BlueViolet); */
+    background-color: black;
+}
+
+.con4 {
+    /* background-color: var(--DeepPink); */
+    background-color: black;
+}
+
+.con5 {
+    /* background-color: var(--MalachiteGreen); */
+    background-color: black;
+}
+
+.con6 {
+    /* background-color: var(--CrimsonRed); */
+    background-color: black;
+}
+
+.con7 {
+    /* background-color: var(--DeepOrange); */
+    background-color: black;
+}
+
+.con8 {
+    /* background-color: var(--primario); */
+    background-color: black;
+}
+
+.con9 {
+    /* background-color: var(--DeepOrange); */
+    background-color: black;
+}
+
+.con10 {
+    /* background-color: var(--primario); */
+    background-color: black;
+}
+
+/* #fecha1 {
+    padding: 1rem 1rem 1rem 4rem;
+    border-radius: 20px;
+    border: 4px solid white;
+    background-color: black;
+    color: aqua;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
+#fecha1:hover {
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 4px solid red;
+    background-color: var(--Gold2);
+    color: var(--DeepBlue);
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+}
+
+#fecha2 {
+    padding: 1rem 1rem 1rem 4rem;
+    border-radius: 20px;
+    border: 4px solid white;
+    background-color: black;
+    color: aqua;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
+#fecha2:hover {
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 4px solid red;
+    background-color: var(--Gold2);
+    color: var(--DeepBlue);
+    font-weight: bold;
+    font-size: larger;
+    cursor: pointer;
+} */
+
+/* .boton1 {
+    align-self: center;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--DeepBlue);
+    color: var(--NeonGreen);
+    border: 4px solid red;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton1:hover {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--NeonGreen);
+    color: var(--DeepBlue);
+    border: 4px solid red;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.boton2 {
+    align-self: center;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--DeepBlue);
+    color: var(--Gold2);
+    border: 4px solid red;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton2:hover {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--Gold2);
+    color: var(--DeepBlue);
+    border: 4px solid red;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.boton3 {
+    align-self: center;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--DeepBlue);
+    color: aqua;
+    border: 4px solid red;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton3:hover {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: aqua;
+    color: var(--DeepBlue);
+    border: 4px solid red;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.boton4 {
+    align-self: center;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--DeepBlue);
+    color: red;
+    border: 4px solid aqua;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton4:hover {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: red;
+    color: var(--DeepBlue);
+    border: 4px solid aqua;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.boton5 {
+    align-self: center;
+    width: 60%;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--DeepBlue);
+    color: var(--NeonGreen);
+    border: 4px solid aqua;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.boton5:hover {
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: var(--NeonGreen);
+    color: var(--DeepBlue);
+    border: 4px solid aqua;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+} */
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+#resultado {
+    max-width: 80%;
+    word-wrap: break-word;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    border: 4px solid white;
+    padding: 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+#array-display {
+    max-width: 80%;
+    word-wrap: break-word;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    border: 4px solid white;
+    padding: 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.resultado-valido {
+    color: aqua;
+}
+
+.resultado-no-valido {
+    color: red;
+}
+
+.linea_horizontal {
+    width: 100%; 
+    height: 4px;
+    background-color: var(--NeonGreen); 
+}
+
+.linea_horizontal2 {
+    width: 80%; 
+    height: 4px;
+    background-color: var(--NeonGreen); 
+}
+
+footer {
+    font-style: italic;
+    text-align: center;
+}
+
+footer h2 {
+    color: #39ff14;
+    border-top: 4px solid #39ff14;    
+}
